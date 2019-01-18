@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="join_us.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="top">
+        <h1>加入我们</h1>
+        <img src="map.jpeg" />
+        <h2>Address: 60 Washington Square S, New York, NY 10012</h2>
+      </div>
+      <form id="contact">
+        <div class="form-group">
+          <label>姓名</label>
+          <input name="name"type="text textbox" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label>邮箱</label>
+          <input name="email" type="email" class="form-control" id="textbox"/>
+        </div>
+        <div class="form-group">
+          <label>消息</label>
+          <textarea name="message" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <button id="submit" class="btn btn-primary btn-purple" type="submit" id="purple">提交</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+    // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBOyRFnc4VAFsz2VYrfbcx0XGfXklx9_js",
+        authDomain: "email-test-2ba09.firebaseapp.com",
+        databaseURL: "https://email-test-2ba09.firebaseio.com",
+        projectId: "email-test-2ba09",
+        storageBucket: "email-test-2ba09.appspot.com",
+        messagingSenderId: "919315785950"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({timestampsInSnapshots: true});
+    </script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
